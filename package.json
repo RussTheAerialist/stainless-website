@@ -1,0 +1,11 @@
+{
+  "name": "stainless",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "gulp": "^3.8.10",
+    "jshint": "^2.6.0",
+    "precommit-hook": "^1.0.7"
+  }
+}
