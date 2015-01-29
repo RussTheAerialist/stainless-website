@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+    head
+        title “Stainless”
+        link(href="/assets/css/main.css", rel="stylesheet")
+    body
+        section#top-home-section.top-section.color-a
+            #top-home-image
+                img#headshot(src="/assets/images/hex.png")
+            #top-title
+                img(src="/assets/images/stainless.png", alt="Stainless")
+            h3#top-subtitle.large-font
+                | A microsite about things done by&nbsp;
+                a.highlight(href="http://russellhay.com/") Russell Hay
+            a(href="#parkour")
+                button.top-button#parkour parkour
+            a(href="#control")
+                button.top-button#control control
+            a(href="#installations")
+                button.top-button#installations installations
+            a(href="#about")
+                button.top-button#about who?
+
+        section#parkour-section.middle-section.color-c
+            header
+                h1.title
+                    a(name="rel_pos_size") Parkour
+                h2.subtitle
+                    | lights on you that react to your motion + IDE
+                .content
+                    hr
+                    .step
+                        | something something
+
+        section#control-section.middle-section.color-b
+            header
+                h1.title
+                    a(name="rel_pos_size") Give Up Your Control
+                h2.subtitle
+                    | Learn to allow anyone on the internet to control your installations
+
+                .content
+                    hr
+                    | Something something
+
+        section#installations-section.middle-section.color-d
+            header
+                h1.title
+                    a(name="rel_pos_size") Installations
+                h2.subtitle
+                    | Art Installations that I've made and exhibited
+
+                .content
+                    hr
+
+        section#about-section.bottom-section.color-a
+            header
+                h1.title
+                    a(name="rel_pos_size") Who?
+
+                .content
+                    hr
+                    | I'm a bunch of nouns, but mostly, I make silly things. When not slaving away at code,
+                    | I jump on and swing from things, and generally incite productive mayhem.

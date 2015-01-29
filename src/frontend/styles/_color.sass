@@ -1,0 +1,44 @@
+$blue: #7e9Fc8
+$white: #DDe6e5
+$coral: #FF373B
+$lightgray: #D3CECA
+$darkgray: #858881
+
+
+.color-a
+  background-color: $white
+  h1, h2, .content, hr
+    color: $darkgray
+
+.color-b
+  background-color: $coral
+
+.color-c
+  background-color: $lightgray
+  h1, h2, .content, hr
+    border-color: $darkgray
+    color: $darkgray
+
+.color-d
+  background-color: $blue
+  h1, h2, .content, hr
+    color: $white
+    border-color: $white
+
+button
+  color: $blue
+  background-color: $white
+
+  &.transparent
+    background-color: transparent
+
+  &:hover, &.transparent:hover
+    border-color: $blue
+    background-color: $blue !important
+    color: $lightgray
+
+#top-home-section
+  color: $darkgray
+
+.highlight
+  color: $blue

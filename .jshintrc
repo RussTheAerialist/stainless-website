@@ -7,5 +7,5 @@
   "undef": true,
   "unused": true,
   "trailing": true,
-  "ais": true
+  "asi": true
 }
