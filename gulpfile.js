@@ -5,6 +5,7 @@ var livereload = require('gulp-livereload')
 var jade = require('gulp-jade')
 var serv = require('gulp-serv')
 var sourcemaps = require('gulp-sourcemaps')
+var rsync = require('gulp-rsync')
 
 gulp.task('sass', function () {
     return sass('src/frontend/styles/main.sass', { sourcemap: true })
@@ -43,4 +44,15 @@ gulp.task('watch', ['default'], function() {
 
 gulp.task('default', ['sass', 'fonts', 'images', 'jade'], function() {
 
+})
+
+gulp.task('deploy', ['default'], function() {
+    return gulp.src('dist/**')
+        .pipe(rsync({
+            root: 'dist',
+            hostname: 'russellhay.com',
+            destination: '/home/www/stainless',
+            incremental: true,
+            update: true
+        }))
 })
