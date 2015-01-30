@@ -6,6 +6,7 @@ var jade = require('gulp-jade')
 var serv = require('gulp-serv')
 var sourcemaps = require('gulp-sourcemaps')
 var rsync = require('gulp-rsync')
+var browserify = require('gulp-browserify')
 
 gulp.task('sass', function () {
     return sass('src/frontend/styles/main.sass', { sourcemap: true })
@@ -32,17 +33,27 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/assets/images'))
 })
 
+gulp.task('scripts', function() {
+    return gulp.src('src/frontend/app.js')
+        .pipe(browserify({
+            debug: true,
+            insertGlobals: true
+        }))
+        .pipe(gulp.dest('dist/assets'))
+})
+
 gulp.task('watch', ['default'], function() {
     livereload.listen()
     gulp.watch('src/frontend/styles/*.sass', ['sass'])
     gulp.watch('src/frontend/templates/*.jade', ['jade'])
+    gulp.watch('src/frontend/**/*.js', ['scripts'])
     serv.start({
         root: __dirname + '/dist',
         port: 8000
     })
 })
 
-gulp.task('default', ['sass', 'fonts', 'images', 'jade'], function() {
+gulp.task('default', ['sass', 'fonts', 'scripts', 'images', 'jade'], function() {
 
 })
 
