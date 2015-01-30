@@ -49,7 +49,8 @@ gulp.task('watch', ['default'], function() {
     gulp.watch('src/frontend/**/*.js', ['scripts'])
     serv.start({
         root: __dirname + '/dist',
-        port: 8000
+        port: 8000,
+        host: '0.0.0.0'
     })
 })
 
