@@ -8,5 +8,6 @@
         var element = evt.target
 
         scroll_to(element.id+ '-section', 500)
+        window.history.pushState('', element.id, '/#' + element.id + '-section')
     })
 })()
