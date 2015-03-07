@@ -1,24 +1,24 @@
 {
   "name": "stainless",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "devDependencies": {
-    "browserify": "^8.1.1",
-    "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-jade": "^0.11.0",
-    "gulp-jsvalidate": "^1.0.1",
-    "gulp-livereload": "^3.6.0",
-    "gulp-rsync": "0.0.5",
-    "gulp-ruby-sass": "^1.0.0-alpha.2",
-    "gulp-serv": "0.0.1",
-    "gulp-sourcemaps": "^1.3.0",
-    "jshint": "^2.6.0",
-    "lodash": "^3.0.0",
-    "precommit-hook": "^1.0.7"
+    "browserify": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-browserify": "latest",
+    "gulp-jade": "latest",
+    "gulp-jsvalidate": "latest",
+    "gulp-livereload": "latest",
+    "gulp-rsync": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-serv": "latest",
+    "gulp-sourcemaps": "latest",
+    "jshint": "latest",
+    "lodash": "latest",
+    "precommit-hook": "latest"
   },
   "dependencies": {
-    "jade": "^1.9.1"
+    "jade": "latest"
   }
 }
